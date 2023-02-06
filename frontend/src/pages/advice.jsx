@@ -7,7 +7,7 @@ export const Advice=()=>{
     const {id} = useParams();
     const [data,setData] = useState({});
     useEffect(()=>{
-        fetch(`http://localhost:5000/beauty/${id}`).then((res)=>res.json()).then((e)=>setData(e[0]))
+        fetch(`https://beautyindia.onrender.com/beauty/${id}`).then((res)=>res.json()).then((e)=>setData(e[0]))
     },[])
     console.log(data)
      

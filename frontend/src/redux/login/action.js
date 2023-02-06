@@ -32,7 +32,7 @@ export const Login=(form)=>async(dispatch)=>{
     console.log(form);
     dispatch(loginsignup(SIGNUPLOADING,true))
     try{
-        let data = await fetch("http://localhost:5000/login",{
+        let data = await fetch("https://beautyindia.onrender.com/login",{
             method: "POST",
         
             body: JSON.stringify(form),

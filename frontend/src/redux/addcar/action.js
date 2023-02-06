@@ -9,7 +9,7 @@ export const Addproduct=(type,payload)=>{
 export const AddToCart =(form,token)=>async(dispatch)=>{
     try{
         dispatch(Addproduct(ADDTOCARTLOADING,true))
-    let data = await fetch("http://localhost:5000/cart",{
+    let data = await fetch("https://beautyindia.onrender.com/cart",{
         method : "POST",
         body : JSON.stringify(form),
         headers : {

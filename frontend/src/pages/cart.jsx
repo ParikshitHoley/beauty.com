@@ -10,7 +10,7 @@ export const Cart =()=>{
     const {token,email,userid,loginsuccess} = useSelector((store)=>store.auth);
     const [state,setState] = useState([]);
     const GetData=()=>{
-       axios.get(`http://localhost:5000/cart/${userid}`,{
+       axios.get(`https://beautyindia.onrender.com/cart/${userid}`,{
         headers: {
             'authorization': `Bearer ${token}`
         }
@@ -27,7 +27,7 @@ export const Cart =()=>{
    const deleteData=(id)=>{
     console.log(id)
     console.log(token)
-    axios.delete(`http://localhost:5000/cart/${id}`,{
+    axios.delete(`https://beautyindia.onrender.com/cart/${id}`,{
       headers :{
         "content-type": "application/json",
         authorization : `Bearer ${token}`

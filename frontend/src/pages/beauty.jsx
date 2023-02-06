@@ -9,7 +9,7 @@ import { Footer } from './Home/Homecomponents/footer';
 export const Beauty=()=>{
     const [data,setData] = useState([]);
     const getdata=async()=>{
-        let data1 = await fetch("http://localhost:5000/beauty").then((res)=>res.json());
+        let data1 = await fetch("https://beautyindia.onrender.com/beauty").then((res)=>res.json());
         setData(data1)
      }
     useEffect(()=>{

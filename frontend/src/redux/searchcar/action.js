@@ -10,7 +10,7 @@ export const searchaction=(type,payload)=>{
 export const search=(text)=>async(dispatch)=>{
     try{
         dispatch(searchaction(LOADINGSEARCH,true))
-         const data= await fetch(`http://localhost:5000/products/search/${text}`).then((res)=>res.json());
+         const data= await fetch(`https://beautyindia.onrender.com/products/search/${text}`).then((res)=>res.json());
          dispatch(searchaction(SEARCH,data))
     }
     catch(e){
